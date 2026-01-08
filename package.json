@@ -1,16 +1,19 @@
 {
-  "name": "iconsbuzzer",
-  "version": "0.0.0",
+  "name": "icons_1",
+  "version": "0.0.1",
   "description": "A lightweight React icon package with customizable SVG icons",
   "type": "module",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*.js"
+  },
   "files": [
-    "src",
     "dist"
   ],
   "scripts": {
-    "build": "babel src --out-dir dist --extensions \".js,.jsx\" --config-file \"./babel.config.js\"",
+    "build": "babel src --out-dir dist --extensions \".js,.jsx,.ts,.tsx\" --config-file \"./babel.config.js\" && node scripts/fix-imports.js",
     "prepublishOnly": "npm run build",
     "test": "jest",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
@@ -44,6 +47,10 @@
     "npm": ">=6.0.0"
   },
   "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
