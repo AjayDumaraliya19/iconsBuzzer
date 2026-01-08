@@ -1,0 +1,63 @@
+{
+  "name": "iconsbuzzer",
+  "version": "0.0.0",
+  "description": "A lightweight React icon package with customizable SVG icons",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir dist --extensions \".js,.jsx\" --config-file \"./babel.config.js\"",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AjayDumaraliya19/iconsBuzzer.git"
+  },
+  "homepage": "https://github.com/AjayDumaraliya19/iconsBuzzer#readme",
+  "bugs": {
+    "url": "https://github.com/AjayDumaraliya19/iconsBuzzer/issues"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/AjayDumaraliya19"
+  },
+  "author": {
+    "name": "Ajay Dumaraliya",
+    "url": "https://github.com/AjayDumaraliya19"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "components",
+    "ui"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "jest": "^29.6.2",
+    "prettier": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
